@@ -39,6 +39,7 @@
 
     });
 });
+
 $("#center li").each(function () {
     $(this).hover(
         function () {
@@ -70,30 +71,35 @@ $(document).ready(function () {
         $.scrollTo(1621, 1000);
     });//1721
     $nav.find('a.news').click(function () {
-        $.scrollTo(3077, 1000);
+        $.scrollTo(3017, 1000);
     });//2449
     $nav.find('a.contact').click(function () {
         $.scrollTo(3591, 1000);
     });//2868
-    $(window).scroll(function () {
-        $('.navigation li.current').removeClass('current');
-        var scroll = $(window).scrollTop();
-        if (scroll < 450) {//450
-            $('a.home').parent().addClass('current');
-        } else if (scroll < 745) {//845
-            $('a.about_us').parent().addClass('current');
-        } else if (scroll < 1615) {//1715
-            $('a.center').parent().addClass('current');
-        } else if (scroll < 3074) {//2445
-            $('a.case').parent().addClass('current');
-        } else if (scroll < 3196) {//2565
-            $('a.news').parent().addClass('current');
-        } else if (scroll < 3661) {//3000
-            $('a.contact').parent().addClass('current');
-        } else {
-            $('.navigation li').removeClass('current');
-        }
-    });
+    $(".navigation li").click(function(){
+        $(this).addClass('current')
+        .siblings().removeClass('current');
+		return false;
+    })
+    // $(window).scroll(function () {
+    //     $('.navigation li.current').removeClass('current');
+    //     var scroll = $(window).scrollTop();
+    //     if (scroll < 450) {//450
+    //         $('a.home').parent().addClass('current');
+    //     } else if (scroll < 745) {//845
+    //         $('a.about_us').parent().addClass('current');
+    //     } else if (scroll < 1615) {//1715
+    //         $('a.center').parent().addClass('current');
+    //     } else if (scroll < 3074) {//2445
+    //         $('a.case').parent().addClass('current');
+    //     } else if (scroll < 3591) {//2565
+    //         $('a.news').parent().addClass('current');
+    //     } else if (scroll < 3661) {//3000
+    //         $('a.contact').parent().addClass('current');
+    //     } else {
+    //         $('.navigation li').removeClass('current');
+    //     }
+    // });
 });
 $(".opdiv").live('click', function () {
     $("#divSCA").OpenDiv();

@@ -346,6 +346,36 @@
     background: url('../img/index_right_btn_hover.png') no-repeat;
 }
 
+.car_menu .next {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    z-index: 999;
+    background: url('../img/index_left_btn.png') no-repeat;
+}
+
+.car_menu .next:hover {
+    background: url('../img/index_left_btn_hover.png') no-repeat;
+}
+
+.car_menu .prev {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    z-index: 999;
+    background: url('../img/index_right_btn.png') no-repeat;
+}
+
+.car_menu .prev:hover {
+    background: url('../img/index_right_btn_hover.png') no-repeat;
+}
+
 .v_content {
     width: 1170px;
     height: 650px;
@@ -395,7 +425,7 @@
 }
 
 .p_content .p_content_list ul li {
-    width: 260px;
+    width: 258px;
     height: 400px;
     float: left;
     margin: 50px 10px;
